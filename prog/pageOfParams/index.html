@@ -1,0 +1,7 @@
+<p></p>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const p = document.querySelector('p')
+    const string = urlParams.get('string')
+    p.innerHTML = string.replace("\n","<br>")
+</script>
