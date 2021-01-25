@@ -1,0 +1,31 @@
+<body>
+    <button>SAVE</button>
+    <input id='input' type="text" value='file_name'>
+    <textarea name="paragraph_text" rows = 200 cols = 200></textarea>
+    <script>
+
+        function download(filename, text) {
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
+
+            element.style.display = 'none';
+            document.body.appendChild(element);
+
+            element.click();
+
+            document.body.removeChild(element);
+        }
+
+        let name = document.getElementById('input')
+        let save = document.querySelector('button')
+        let text = document.querySelector('textarea')
+
+        save.addEventListener('click',()=>{
+            console.log(name.value)
+            download(name.value,text.value)
+        })
+        
+    </script>
+</body>
+</html>
