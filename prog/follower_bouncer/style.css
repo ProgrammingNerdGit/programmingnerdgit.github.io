@@ -1,0 +1,8 @@
+canvas{
+    border: black;
+    border-radius: 5;
+    border-style: solid;
+}
+img{
+    display: none;
+}
